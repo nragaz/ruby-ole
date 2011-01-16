@@ -1,10 +1,10 @@
 Kernel.load File.dirname(__FILE__) + '/lib/ole/storage/version.rb'
 
-PKG_NAME = 'ruby-ole'
-PKG_VERSION = Ole::Storage::VERSION
+PKG_NAME = 'ruby-ole' unless defined?(PKG_NAME)
+PKG_VERSION = Ole::Storage::VERSION unless defined?(PKG_VERSION)
 
 Gem::Specification.new do |s|
-	s.name = PKG_NAME
+	s.name = PKG_NAME 
 	s.version = PKG_VERSION
 	s.summary = %q{Ruby OLE library.}
 	s.description = %q{A library for easy read/write access to OLE compound documents for Ruby.}
